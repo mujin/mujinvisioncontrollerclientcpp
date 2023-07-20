@@ -1,4 +1,4 @@
-MUJIN Vision Controller Python Client Library
+MUJIN Vision Controller C++ Client Library
 ---------------------------------------------
 
 TODO: python api documentation
@@ -7,14 +7,12 @@ This is an open-source client library communicating with the MUJIN Vision Contro
 
 `C++ API Documentation <https://github.com/mujin/mujinvision/blob/master/include/mujinvision/mujinvisionmanager.h>`_
 
+(Note: this API is loosely based on the link above.)
+
 
 Releases and Versioning
 -----------------------
 
-- The latest stable build is managed by the **latest_stable** branch, please use it.  It is tested on Linux with python 2.7.3.
-  
-  - **Do not use master branch** if you are not a developer. 
-  
 - Versions have three numbers: MAJOR.MINOR.PATCH
   
   - Official releases always have the MINOR and PATCH version as an even number. For example 0.2.4, 0.2.6, 0.4.0, 0.4.2.
@@ -37,7 +35,7 @@ TODO: test on windows
 Running on Linux
 ----------------
 
-Load mujinvisioncontrollerclient as a module in python.
+TODO: open source C++ building.
 
 
 Install on Linux
@@ -45,26 +43,22 @@ Install on Linux
 
 .. code-block:: bash
 
-  BUILD_DIR= # where you want the build files to be, e.g. /path/to/build/
-  INSTALL_DIR= # where you want the library to be installed, e.g. /path/to/install/
-  python setup.py build --build-base=$BUILD_DIR install --prefix=$INSTALL_DIR --record $BUILD_DIR/installedfiles.txt
-
-  # make sure INSTALL_DIR is on PYTHONPATH
-  python -c "from distutils.sysconfig import get_python_lib; print get_python_lib(1,prefix='$INSTALL_DIR')" | xargs -I {} python -c "import sys; print 'Is {} on PYTHONPATH?',sys.path.count('{}')>0"
-
+  # TODO: make this sort of work at all.
+  cmake
 
 Uninstall on Linux
 -------------------
 
 .. code-block:: bash
 
-  cat $BUILD_DIR/installedfiles.txt | xargs rm -rf
+  # TODO: I think it's just `make uninstall` but I haven't checked
+  make uninstall
 
 
 Licenses
 --------
 
-MUJIN Vision Controller Python Client is Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+MUJIN Vision Controller C++ Client is Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
 
